@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spin the Wheel Categories</title>
+    <title>Spin the Wheel Challenge</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Spin the Wheel Challenge</h1>
+        <h1 class="neon-text">Spin the Wheel Challenge</h1>
         <p>Click a category to get your question!</p>
         <div class="category-grid">
             <button class="category-btn" onclick="showQuestion('randomFun')">Random Fun Questions</button>
@@ -22,6 +22,7 @@
         <div id="question-box" class="question-box hidden">
             <h2>Question:</h2>
             <p id="question-text"></p>
+            <div id="options-container" class="options-container hidden"></div>
         </div>
     </div>
     
