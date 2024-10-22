@@ -90,12 +90,12 @@ h1 {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 1.5em;
-    animation: slideIn 0.5s ease-in-out;
+    animation: spinIn 1s ease-in-out forwards;
 }
 
-@keyframes slideIn {
-    from { transform: translateY(100px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+@keyframes spinIn {
+    0% { transform: rotate(0deg) scale(0.5); opacity: 0; }
+    100% { transform: rotate(360deg) scale(1); opacity: 1; }
 }
 
 .options-container {

@@ -182,7 +182,14 @@ function showQuestion(category) {
         optionsContainer.appendChild(optionBtn);
     });
 
-    document.getElementById("question-box").classList.remove("hidden");
+    const questionBox = document.getElementById("question-box");
+    questionBox.classList.remove("hidden");
+    
+    // Add spin animation when question pops up
+    questionBox.style.animation = "none";  // Reset animation
+    setTimeout(() => {
+        questionBox.style.animation = "";  // Trigger animation
+    }, 10);  // Short timeout to ensure animation runs again
 }
 
 function handleAnswer(button, selectedIndex, correctIndex) {
