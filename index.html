@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel Categories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spin the Wheel Challenge</h1>
+        <p>Click a category to get your question!</p>
+        <div class="category-grid">
+            <button class="category-btn" onclick="showQuestion('randomFun')">Random Fun Questions</button>
+            <button class="category-btn" onclick="showQuestion('math')">Math Questions</button>
+            <button class="category-btn" onclick="showQuestion('coding')">Coding/Programming</button>
+            <button class="category-btn" onclick="showQuestion('techTrends')">Tech Trends</button>
+            <button class="category-btn" onclick="showQuestion('ai')">AI</button>
+            <button class="category-btn" onclick="showQuestion('pizzas')">Best Pizzas</button>
+        </div>
+
+        <div id="question-box" class="question-box hidden">
+            <h2>Question:</h2>
+            <p id="question-text"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
