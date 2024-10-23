@@ -174,6 +174,18 @@ function showConfetti() {
     }
 }
 
+function playSound() {
+    const sound = new Audio('https://www.fesliyanstudios.com/play-mp3/387');
+    sound.play();
+}
+
+function showFireworks() {
+    const firework = document.createElement("div");
+    firework.classList.add("firework-burst");
+    document.body.appendChild(firework);
+    setTimeout(() => firework.remove(), 2000);
+}
+
 function getCategoryFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('category');
@@ -200,8 +212,7 @@ function showQuestion(category) {
 
     const questionBox = document.getElementById("question-box");
     questionBox.classList.remove("hidden");
-
-    // Add spin animation when question pops up
+    
     questionBox.style.animation = "none";  // Reset animation
     setTimeout(() => {
         questionBox.style.animation = "";  // Trigger animation
@@ -211,14 +222,15 @@ function showQuestion(category) {
 function handleAnswer(button, selectedIndex, correctIndex) {
     if (selectedIndex === correctIndex) {
         button.classList.add("correct");
-        // Show celebration after correct answer
+        // Trigger grand celebration
+        playSound();
+        showFireworks();
         showCelebration();
     } else {
         button.classList.add("incorrect");
     }
 }
 
-// Show celebration modal
 function showCelebration() {
     const celebrationModal = document.createElement("div");
     celebrationModal.classList.add("celebration-modal");
@@ -229,17 +241,25 @@ function showCelebration() {
     `;
     document.body.appendChild(celebrationModal);
     celebrationModal.style.display = "flex";
-    
+
+    // Add sparkles around the modal
+    for (let i = 0; i < 10; i++) {
+        let sparkle = document.createElement("div");
+        sparkle.classList.add("sparkle");
+        sparkle.style.left = Math.random() * 100 + "%";
+        sparkle.style.top = Math.random() * 100 + "%";
+        celebrationModal.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 2000);
+    }
+
     showConfetti();  // Trigger confetti animation
 
-    // Hide celebration modal after 3 seconds
     setTimeout(() => {
         celebrationModal.style.display = "none";
         celebrationModal.remove();
-    }, 3000);
+    }, 4000);
 }
 
-// Get category from URL and display the corresponding question
 const category = getCategoryFromURL();
 if (category) {
     showQuestion(category);
