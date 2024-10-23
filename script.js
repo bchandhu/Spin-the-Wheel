@@ -163,6 +163,22 @@ const questions = {
     ]
 };
 
+function showConfetti() {
+    for (let i = 0; i < 100; i++) {
+        let confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 3000);
+    }
+}
+
+function getCategoryFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('category');
+}
+
 function showQuestion(category) {
     const randomIndex = Math.floor(Math.random() * questions[category].length);
     const selectedQuestion = questions[category][randomIndex];
@@ -184,18 +200,47 @@ function showQuestion(category) {
 
     const questionBox = document.getElementById("question-box");
     questionBox.classList.remove("hidden");
-    
+
     // Add spin animation when question pops up
     questionBox.style.animation = "none";  // Reset animation
     setTimeout(() => {
         questionBox.style.animation = "";  // Trigger animation
-    }, 10);  // Short timeout to ensure animation runs again
+    }, 10);
 }
 
 function handleAnswer(button, selectedIndex, correctIndex) {
     if (selectedIndex === correctIndex) {
         button.classList.add("correct");
+        // Show celebration after correct answer
+        showCelebration();
     } else {
         button.classList.add("incorrect");
     }
+}
+
+// Show celebration modal
+function showCelebration() {
+    const celebrationModal = document.createElement("div");
+    celebrationModal.classList.add("celebration-modal");
+    celebrationModal.innerHTML = `
+        <div class="celebration-content">
+            🎉 You got the prize! 🎉
+        </div>
+    `;
+    document.body.appendChild(celebrationModal);
+    celebrationModal.style.display = "flex";
+    
+    showConfetti();  // Trigger confetti animation
+
+    // Hide celebration modal after 3 seconds
+    setTimeout(() => {
+        celebrationModal.style.display = "none";
+        celebrationModal.remove();
+    }, 3000);
+}
+
+// Get category from URL and display the corresponding question
+const category = getCategoryFromURL();
+if (category) {
+    showQuestion(category);
 }

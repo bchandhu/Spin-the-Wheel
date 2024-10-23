@@ -10,12 +10,6 @@ body {
     height: 100vh;
     text-align: center;
     overflow: hidden;
-    animation: backgroundSlide 10s infinite alternate;
-}
-
-@keyframes backgroundSlide {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
 }
 
 .container {
@@ -27,12 +21,6 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.1px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    animation: rotateBox 5s infinite alternate;
-}
-
-@keyframes rotateBox {
-    from { transform: rotate(-1deg); }
-    to { transform: rotate(1deg); }
 }
 
 h1 {
@@ -66,13 +54,12 @@ h1 {
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    animation: pulseButton 2s infinite;
-}
-
-@keyframes pulseButton {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
 .category-btn:hover {
@@ -141,4 +128,53 @@ h1 {
     50% { transform: translateX(5px); }
     75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
+}
+
+/* Celebration Modal */
+.celebration-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.celebration-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+    font-size: 2em;
+    animation: popUp 1s ease forwards;
+}
+
+@keyframes popUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    animation: fall 2s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
 }

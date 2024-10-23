@@ -3,29 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spin the Wheel Challenge</title>
+    <title>Select Topic</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="neon-text">Spin the Wheel Challenge</h1>
-        <p>Click a category to get your question!</p>
+        <h1 class="neon-text">Select Your Topic</h1>
         <div class="category-grid">
-            <button class="category-btn" onclick="showQuestion('randomFun')">Random Fun Questions</button>
-            <button class="category-btn" onclick="showQuestion('math')">Math Questions</button>
-            <button class="category-btn" onclick="showQuestion('coding')">Coding/Programming</button>
-            <button class="category-btn" onclick="showQuestion('techTrends')">Tech Trends</button>
-            <button class="category-btn" onclick="showQuestion('ai')">AI</button>
-            <button class="category-btn" onclick="showQuestion('pizzas')">Best Pizzas</button>
-        </div>
-
-        <div id="question-box" class="question-box hidden">
-            <h2>Question:</h2>
-            <p id="question-text"></p>
-            <div id="options-container" class="options-container hidden"></div>
+            <a href="question.html?category=randomFun" class="category-btn">Random Fun Questions</a>
+            <a href="question.html?category=math" class="category-btn">Math Questions</a>
+            <a href="question.html?category=coding" class="category-btn">Coding/Programming</a>
+            <a href="question.html?category=techTrends" class="category-btn">Tech Trends</a>
+            <a href="question.html?category=ai" class="category-btn">AI</a>
+            <a href="question.html?category=pizzas" class="category-btn">Best Pizzas</a>
         </div>
     </div>
-    
-    <script src="script.js"></script>
 </body>
 </html>
