@@ -240,6 +240,10 @@ function handleAnswer(button, selectedIndex, correctIndex) {
         showFireworks();
         showConfetti();
 
+        // Show the "Correct Answer" message
+        const correctMessage = document.getElementById("correct-answer-message");
+        correctMessage.classList.add("show");  // Add the show class to display it
+
     } else {
         button.classList.add("incorrect");
     }
@@ -247,7 +251,6 @@ function handleAnswer(button, selectedIndex, correctIndex) {
     // Reveal the "Back to Topics" button after answering the question
     document.getElementById("back-to-topics-btn").classList.remove("hidden");
 }
-
 const category = getCategoryFromURL();
 if (category) {
     showQuestion(category);

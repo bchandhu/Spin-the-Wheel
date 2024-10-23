@@ -119,9 +119,9 @@ h1 {
 /* Enlarge Correct Answer */
 .celebrate-correct {
     font-size: 2.5em; /* Make the correct answer much bigger */
-    color: #FFD700; /* Gold color for the correct answer */
+    color: #28a745; /* Greenish color for the correct answer */
     animation: pulseGrow 1s ease forwards; /* Animation for growing the answer */
-    box-shadow: 0 0 30px #FFD700, 0 0 50px #FFD700; /* Add a glowing effect */
+    box-shadow: 0 0 30px #28a745, 0 0 50px #28a745; /* Add a green glow effect */
     z-index: 10;
 }
 
@@ -275,4 +275,22 @@ h1 {
     border-radius: 50%;
     border: 5px solid yellow;
     animation: fireworks 2s ease-out;
+}
+.correct-answer-message {
+    font-size: 2em;
+    color: #28a745;  /* Green color */
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: none;  /* Hidden by default */
+}
+
+.correct-answer-message.show {
+    display: block; /* Show when correct answer is clicked */
+    animation: fadeInCorrect 0.5s ease forwards;
+}
+
+/* Fade In Animation for the Correct Answer Message */
+@keyframes fadeInCorrect {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
