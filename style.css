@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -23,6 +24,43 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Grid system for the first page */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Three columns */
+    gap: 20px;  /* Space between the boxes */
+    justify-items: center;
+}
+
+/* Category Buttons Styling */
+.category-btn {
+    background: linear-gradient(45deg, #FF6B6B, #FFD93D);
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 250px;  /* Ensure consistent size for the buttons */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.category-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #FFD93D, #FF6B6B);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+}
+
+/* Heading Style */
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -39,37 +77,7 @@ h1 {
     50% { opacity: 0.8; }
 }
 
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.category-btn {
-    background: linear-gradient(45deg, #FF6B6B, #FFD93D);
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
-.category-btn:hover {
-    transform: scale(1.1);
-}
-
-.hidden {
-    display: none;
-}
-
+/* Question Box Animation */
 .question-box {
     margin-top: 40px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -85,6 +93,7 @@ h1 {
     100% { transform: rotate(360deg) scale(1); opacity: 1; }
 }
 
+/* Option Buttons */
 .options-container {
     display: flex;
     flex-direction: column;
@@ -107,16 +116,29 @@ h1 {
     transform: scale(1.05);
 }
 
-.correct {
-    background-color: #28a745 !important;
-    animation: correctGlow 1s ease;
+/* Enlarge Correct Answer */
+.celebrate-correct {
+    font-size: 2.5em; /* Make the correct answer much bigger */
+    color: #FFD700; /* Gold color for the correct answer */
+    animation: pulseGrow 1s ease forwards; /* Animation for growing the answer */
+    box-shadow: 0 0 30px #FFD700, 0 0 50px #FFD700; /* Add a glowing effect */
+    z-index: 10;
 }
 
-@keyframes correctGlow {
-    from { box-shadow: 0 0 10px #28a745; }
-    to { box-shadow: 0 0 30px #28a745; }
+@keyframes pulseGrow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(2); }
 }
 
+/* Dim Incorrect Options */
+.dim-option {
+    opacity: 0.5; /* Make incorrect options less visible */
+    filter: brightness(0.5); /* Darken the incorrect options */
+    pointer-events: none; /* Prevent further clicking */
+}
+
+/* Incorrect Answer Animation */
 .incorrect {
     background-color: #dc3545 !important;
     animation: incorrectShake 0.3s ease;
@@ -128,6 +150,52 @@ h1 {
     50% { transform: translateX(5px); }
     75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
+}
+
+/* Back to Topics Button */
+.back-to-topics-btn {
+    margin-top: 30px;
+    display: inline-block;
+    background: linear-gradient(45deg, #FF6B6B, #FFD93D);
+    padding: 15px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effects */
+.back-to-topics-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #FFD93D, #FF6B6B);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+}
+
+/* Glowing effect on hover */
+.back-to-topics-btn:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
+    transform: rotate(45deg);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.back-to-topics-btn:hover:before {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.2);
 }
 
 /* Celebration Modal */
@@ -160,11 +228,7 @@ h1 {
     position: relative;
 }
 
-@keyframes popUp {
-    0% { transform: scale(0.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
+/* Sparkles for Celebration */
 .sparkle {
     position: absolute;
     width: 10px;

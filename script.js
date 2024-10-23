@@ -220,44 +220,32 @@ function showQuestion(category) {
 }
 
 function handleAnswer(button, selectedIndex, correctIndex) {
+    const options = document.querySelectorAll(".option-btn");
+
+    // If the correct answer is clicked
     if (selectedIndex === correctIndex) {
         button.classList.add("correct");
-        // Trigger grand celebration
+        // Add a class to enlarge the correct answer
+        button.classList.add("celebrate-correct");
+
+        // Dim the incorrect options
+        options.forEach((option, index) => {
+            if (index !== correctIndex) {
+                option.classList.add("dim-option"); // Add a class to dim the incorrect options
+            }
+        });
+
+        // Trigger grand celebration (sound, fireworks, confetti)
         playSound();
         showFireworks();
-        showCelebration();
+        showConfetti();
+
     } else {
         button.classList.add("incorrect");
     }
-}
 
-function showCelebration() {
-    const celebrationModal = document.createElement("div");
-    celebrationModal.classList.add("celebration-modal");
-    celebrationModal.innerHTML = `
-        <div class="celebration-content">
-            🎉 You got the prize! 🎉
-        </div>
-    `;
-    document.body.appendChild(celebrationModal);
-    celebrationModal.style.display = "flex";
-
-    // Add sparkles around the modal
-    for (let i = 0; i < 10; i++) {
-        let sparkle = document.createElement("div");
-        sparkle.classList.add("sparkle");
-        sparkle.style.left = Math.random() * 100 + "%";
-        sparkle.style.top = Math.random() * 100 + "%";
-        celebrationModal.appendChild(sparkle);
-        setTimeout(() => sparkle.remove(), 2000);
-    }
-
-    showConfetti();  // Trigger confetti animation
-
-    setTimeout(() => {
-        celebrationModal.style.display = "none";
-        celebrationModal.remove();
-    }, 4000);
+    // Reveal the "Back to Topics" button after answering the question
+    document.getElementById("back-to-topics-btn").classList.remove("hidden");
 }
 
 const category = getCategoryFromURL();
