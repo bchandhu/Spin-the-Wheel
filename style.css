@@ -294,3 +294,19 @@ h1 {
     0% { opacity: 0; transform: translateY(-10px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+/* Spin the Wheel Headline Styling */
+.spin-the-wheel {
+    font-size: 4em;  /* Make it big */
+    color: #FFD700;  /* Gold color */
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500;  /* Glowing effect */
+    font-weight: bold;
+    margin-bottom: 30px;  /* Space between this and the next headline */
+    animation: bounce 2s infinite;  /* Bouncing animation */
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
