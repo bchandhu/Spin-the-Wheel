@@ -1,4 +1,4 @@
-/* General Styles */
+/* General container styling for centering elements */
 body {
     margin: 0;
     padding: 0;
@@ -6,30 +6,50 @@ body {
     background: linear-gradient(90deg, #00C9FF, #92FE9D);
     color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Align elements vertically */
+    justify-content: flex-start; /* Aligns everything at the top */
+    align-items: center;  /* Center the content horizontally */
     height: 100vh;
     text-align: center;
     overflow: hidden;
 }
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.1px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* Spin the Wheel Headline Styling */
+.spin-the-wheel {
+    font-size: 4em;  /* Make it big */
+    color: #FFD700;  /* Gold color */
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500;  /* Glowing effect */
+    font-weight: bold;
+    margin-bottom: 30px;  /* Space between heading and next element */
+    margin-top: 20px;  /* Add space at the top */
+    width: 100%;  /* Take full width */
+    text-align: center;  /* Center the heading horizontally */
 }
 
-/* Grid system for the first page */
+/* Heading Style */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.neon-text {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 40px #FF4500;
+    animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* Grid system for the category buttons */
 .category-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);  /* Three columns */
     gap: 20px;  /* Space between the boxes */
     justify-items: center;
+    margin-top: 20px;  /* Space between the grid and the heading */
 }
 
 /* Category Buttons Styling */
@@ -48,7 +68,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100px;
-    width: 250px;  /* Ensure consistent size for the buttons */
+    width: 250px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -58,23 +78,6 @@ body {
     background: linear-gradient(45deg, #FFD93D, #FF6B6B);
     box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
     text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
-}
-
-/* Heading Style */
-h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.neon-text {
-    color: #fff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 40px #FF4500;
-    animation: flicker 3s infinite alternate;
-}
-
-@keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
 }
 
 /* Question Box Animation */
@@ -198,6 +201,26 @@ h1 {
     transform: rotate(45deg) scale(1.2);
 }
 
+/* Correct Answer Message Styling */
+.correct-answer-message {
+    font-size: 2em;
+    color: #28a745;  /* Green color for the correct answer message */
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: none;  /* Hidden by default */
+}
+
+.correct-answer-message.show {
+    display: block; /* Show when correct answer is clicked */
+    animation: fadeInCorrect 0.5s ease forwards;
+}
+
+/* Fade In Animation for the Correct Answer Message */
+@keyframes fadeInCorrect {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 /* Celebration Modal */
 .celebration-modal {
     position: fixed;
@@ -275,38 +298,4 @@ h1 {
     border-radius: 50%;
     border: 5px solid yellow;
     animation: fireworks 2s ease-out;
-}
-.correct-answer-message {
-    font-size: 2em;
-    color: #28a745;  /* Green color */
-    font-weight: bold;
-    margin-bottom: 20px;
-    display: none;  /* Hidden by default */
-}
-
-.correct-answer-message.show {
-    display: block; /* Show when correct answer is clicked */
-    animation: fadeInCorrect 0.5s ease forwards;
-}
-
-/* Fade In Animation for the Correct Answer Message */
-@keyframes fadeInCorrect {
-    0% { opacity: 0; transform: translateY(-10px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-/* Spin the Wheel Headline Styling */
-.spin-the-wheel {
-    font-size: 4em;  /* Make it big */
-    color: #FFD700;  /* Gold color */
-    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500;  /* Glowing effect */
-    font-weight: bold;
-    margin-bottom: 30px;  /* Space between this and the next headline */
-    animation: bounce 2s infinite;  /* Bouncing animation */
-}
-
-/* Bouncing animation */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-20px); }
-    60% { transform: translateY(-10px); }
 }
