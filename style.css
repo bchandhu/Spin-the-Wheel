@@ -4,11 +4,11 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(90deg, #00C9FF, #92FE9D);
-    color: #fff;
+    color: #FFFFFF;
     display: flex;
-    flex-direction: column; /* Align elements vertically */
-    justify-content: flex-start; /* Aligns everything at the top */
-    align-items: center;  /* Center the content horizontally */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 100vh;
     text-align: center;
     overflow: hidden;
@@ -16,14 +16,14 @@ body {
 
 /* Spin the Wheel Headline Styling */
 .spin-the-wheel {
-    font-size: 4em;  /* Make it big */
-    color: #FFD700;  /* Gold color */
-    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500;  /* Glowing effect */
+    font-size: 4em;
+    color: #FFD700; /* Bright gold for contrast */
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500;
     font-weight: bold;
-    margin-bottom: 30px;  /* Space between heading and next element */
-    margin-top: 20px;  /* Add space at the top */
-    width: 100%;  /* Take full width */
-    text-align: center;  /* Center the heading horizontally */
+    margin-bottom: 30px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
 }
 
 /* Heading Style */
@@ -33,11 +33,10 @@ h1 {
 }
 
 .neon-text {
-    color: #fff;
+    color: #FFFFFF;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 40px #FF4500;
     animation: flicker 3s infinite alternate;
 }
-
 @keyframes flicker {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.8; }
