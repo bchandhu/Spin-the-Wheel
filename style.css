@@ -1,7 +1,38 @@
 /* Background and Font Styling */
 body.bg-dark {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-image: url('https://path-to-your-low-poly-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+body.bg-dark {
+    background: linear-gradient(45deg, #f78ca0, #f9ad6a, #fad05f, #66a6ff, #5be7c4);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 
