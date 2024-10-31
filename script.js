@@ -212,11 +212,9 @@ function showQuestion(category) {
 
     const questionBox = document.getElementById("question-box");
     questionBox.classList.remove("hidden");
-    
-    questionBox.style.animation = "none";  // Reset animation
-    setTimeout(() => {
-        questionBox.style.animation = "";  // Trigger animation
-    }, 10);
+
+    // Disable the animation for question box
+    questionBox.style.animation = "none";
 }
 
 function handleAnswer(button, selectedIndex, correctIndex) {
@@ -251,6 +249,7 @@ function handleAnswer(button, selectedIndex, correctIndex) {
     // Reveal the "Back to Topics" button after answering the question
     document.getElementById("back-to-topics-btn").classList.remove("hidden");
 }
+
 const category = getCategoryFromURL();
 if (category) {
     showQuestion(category);

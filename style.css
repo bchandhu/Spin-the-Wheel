@@ -55,7 +55,7 @@ h1 {
 /* Category Buttons Styling */
 .category-btn {
     background: linear-gradient(45deg, #FF6B6B, #FFD93D);
-    padding: 20px;
+    padding: 25px;
     border: none;
     border-radius: 10px;
     font-size: 1.2em;
@@ -67,10 +67,12 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 250px;
+    height: 150px;
+    width: 300px;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 1.5em;
+
 }
 
 .category-btn:hover {
