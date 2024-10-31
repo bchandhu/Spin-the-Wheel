@@ -19,7 +19,13 @@ body.bg-light {
     
 }
 .lead {
-    color: #FFB6C1;
+    font-size: 2em; /* Increase font size */
+    font-weight: bold;
+    color: #FFB6C1; /* Light pink color for a soft look */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 /* Category Block Styling */
