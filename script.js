@@ -38,15 +38,26 @@ const questions = {
     ]
 };
 
-function showConfetti() {
-    for (let i = 0; i < 100; i++) {
-        const confetti = document.createElement("div");
-        confetti.classList.add("confetti");
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        document.body.appendChild(confetti);
-        setTimeout(() => confetti.remove(), 3000); // Remove confetti after 3 seconds
-    }
+function playCelebrationSound() {
+    const audio = new Audio('https://www.fesliyanstudios.com/play-mp3/387'); // Example sound URL
+    audio.play();
+}
+
+// Enhanced Confetti using canvas-confetti library
+function launchConfetti() {
+    confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+}
+
+// Fireworks Effect
+function showFireworks() {
+    const firework = document.createElement("div");
+    firework.classList.add("firework-burst");
+    document.body.appendChild(firework);
+    setTimeout(() => firework.remove(), 2000);
 }
 
 function getCategoryFromURL() {
@@ -87,8 +98,10 @@ function handleAnswer(button, selectedIndex, correctIndex) {
                 option.classList.add("btn-secondary");
             }
         });
-        // Show confetti when correct answer is clicked
-        showConfetti();
+        // Trigger grand celebration (confetti, fireworks, and sound)
+        launchConfetti();
+        showFireworks();
+        playCelebrationSound();
     } else {
         button.classList.add("btn-danger");
     }
