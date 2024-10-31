@@ -4,13 +4,22 @@ body.bg-dark {
     color: #ffffff;
 }
 
+
 body.bg-light {
     background: linear-gradient(to right, #ffffff, #e3f2fd);
 }
 
 /* Headings */
-.display-3, .display-4 {
+.display-3{
     color: #FFD700;
+    font-weight: bold;
+}
+.display-4 {
+    color: #FFD700;
+    
+}
+.lead {
+    color: #FFB6C1;
 }
 
 /* Category Block Styling */
@@ -18,13 +27,13 @@ body.bg-light {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    height: 150px;
     width: 100%;
     font-size: 1.5em;
     font-weight: bold;
     color: #ffffff;
     background: linear-gradient(135deg, #6a1b9a, #ab47bc);
-    border-radius: 15px;
+    border-radius: 10px;
     text-decoration: none;
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -32,7 +41,7 @@ body.bg-light {
 .category-block:hover {
     transform: scale(1.05);
     background: linear-gradient(135deg, #ab47bc, #6a1b9a);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .category-block:active {
@@ -79,4 +88,20 @@ body.bg-light {
 
 .btn-danger {
     background-color: #dc3545 !important;
+}
+.confetti {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700; /* Default color */
+    border-radius: 50%;
+    animation: fall 3s linear infinite;
+    pointer-events: none;
+    z-index: 1000; /* Bring confetti to the front */
+}
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }

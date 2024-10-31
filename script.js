@@ -38,6 +38,17 @@ const questions = {
     ]
 };
 
+function showConfetti() {
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 3000); // Remove confetti after 3 seconds
+    }
+}
+
 function getCategoryFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('category');
@@ -76,6 +87,8 @@ function handleAnswer(button, selectedIndex, correctIndex) {
                 option.classList.add("btn-secondary");
             }
         });
+        // Show confetti when correct answer is clicked
+        showConfetti();
     } else {
         button.classList.add("btn-danger");
     }
