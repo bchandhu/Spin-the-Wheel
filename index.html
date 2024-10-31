@@ -3,25 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Topic</title>
+    <title>Spin the Wheel</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-dark text-white">
+    <div class="container text-center my-5">
+        <h1 class="display-3 font-weight-bold mt-5">Spin the Wheel</h1>
+        <h2 class="lead text-muted mt-3">Select Your Topic</h2>
 
-    <!-- Move the "Spin the Wheel" headline outside the container -->
-    <h1 class="spin-the-wheel">Spin the Wheel</h1>
-
-    <div class="container">
-        <h1 class="neon-text">Select Your Topic</h1>
-        <div class="category-grid">
-            <a href="question.html?category=randomFun" class="category-btn">Random Fun Questions</a>
-            <a href="question.html?category=math" class="category-btn">Math Questions</a>
-            <a href="question.html?category=coding" class="category-btn">Coding/Programming</a>
-            <a href="question.html?category=techTrends" class="category-btn">Tech Trends</a>
-            <a href="question.html?category=ai" class="category-btn">AI</a>
-            <a href="question.html?category=pizzas" class="category-btn">Best Pizzas</a>
+        <div class="row mt-5">
+            <!-- Each block will occupy half width on larger screens and full width on small screens -->
+            <div class="col-md-6 mb-4">
+                <a href="question.html?category=randomFun" class="category-block">Random Fun Questions</a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="question.html?category=math" class="category-block">Math Questions</a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="question.html?category=coding" class="category-block">Coding/Programming</a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="question.html?category=techTrends" class="category-block">Tech Trends</a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="question.html?category=ai" class="category-block">AI</a>
+            </div>
+            <div class="col-md-6 mb-4">
+                <a href="question.html?category=pizzas" class="category-block">Best Pizzas</a>
+            </div>
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>

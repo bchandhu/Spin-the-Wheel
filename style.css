@@ -1,308 +1,82 @@
-/* General container styling for centering elements */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(90deg, #00C9FF, #92FE9D);
-    color: #FFFFFF;
+/* Background and Font Styling */
+body.bg-dark {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+body.bg-light {
+    background: linear-gradient(to right, #ffffff, #e3f2fd);
+}
+
+/* Headings */
+.display-3, .display-4 {
+    color: #FFD700;
+}
+
+/* Category Block Styling */
+.category-block {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* Spin the Wheel Headline Styling */
-.spin-the-wheel {
-    font-size: 4em;
-    color: #FFD700; /* Gold color */
-    font-weight: bold;
-    margin: 30px 0;
-    text-align: center;
-    text-shadow: none; /* Remove shadow */
-}
-
-/* @keyframes glowPulse {
-    0% { text-shadow: 0 0 15px #FFD700, 0 0 25px #FFA500, 0 0 35px #FF4500; }
-    100% { text-shadow: 0 0 25px #FFD700, 0 0 40px #FFA500, 0 0 50px #FF4500; }
-} */
-
-/* Heading Style */
-h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.neon-text {
-    font-size: 3em;
-    color: #FF6B6B; /* Vibrant color */
-    margin: 20px 0;
-    text-shadow: none; /* Remove shadow */
-    animation: none; /* Remove animation */
-}
-
-@keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
-}
-
-/* Grid system for the category buttons */
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* Three columns */
-    gap: 20px;  /* Space between the boxes */
-    justify-items: center;
-    margin-top: 20px;  /* Space between the grid and the heading */
-}
-
-/* Category Buttons Styling */
-.category-btn {
-    background: linear-gradient(45deg, #FF6B6B, #FFD93D);
-    padding: 25px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    height: 150px;
-    width: 300px;
+    height: 200px;
+    width: 100%;
+    font-size: 1.5em;
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.5em;
-
+    color: #ffffff;
+    background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.category-btn:hover {
-    transform: scale(1.1);
-    background: linear-gradient(45deg, #FFD93D, #FF6B6B);
-    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
-    text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+.category-block:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ab47bc, #6a1b9a);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Question Box Animation */
-.question-box {
-    margin-top: 40px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    font-size: 1.5em;
-    animation: spinIn 1s ease-in-out forwards;
+.category-block:active {
+    transform: scale(1);
 }
 
-@keyframes spinIn {
-    0% { transform: rotate(0deg) scale(0.5); opacity: 0; }
-    100% { transform: rotate(360deg) scale(1); opacity: 1; }
+/* Question Box */
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Option Buttons */
-.options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
 .option-btn {
-    background-color: #333;
+    background-color: #5c6bc0;
     color: #fff;
     padding: 15px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    margin: 5px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .option-btn:hover {
-    transform: scale(1.05);
-}
-
-/* Enlarge Correct Answer */
-.celebrate-correct {
-    font-size: 2.5em; /* Make the correct answer much bigger */
-    color: #28a745; /* Greenish color for the correct answer */
-    animation: pulseGrow 1s ease forwards; /* Animation for growing the answer */
-    box-shadow: 0 0 30px #28a745, 0 0 50px #28a745; /* Add a green glow effect */
-    z-index: 10;
-}
-
-@keyframes pulseGrow {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(2); }
-}
-
-/* Dim Incorrect Options */
-.dim-option {
-    opacity: 0.5; /* Make incorrect options less visible */
-    filter: brightness(0.5); /* Darken the incorrect options */
-    pointer-events: none; /* Prevent further clicking */
-}
-
-/* Incorrect Answer Animation */
-.incorrect {
-    background-color: #dc3545 !important;
-    animation: incorrectShake 0.3s ease;
-}
-
-@keyframes incorrectShake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
+    background-color: #3949ab;
 }
 
 /* Back to Topics Button */
-.back-to-topics-btn {
-    margin-top: 30px;
-    display: inline-block;
-    background: linear-gradient(45deg, #FF6B6B, #FFD93D);
-    padding: 15px 30px;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-    position: relative;
-    overflow: hidden;
+.btn-outline-primary {
+    transition: transform 0.3s ease;
 }
 
-/* Button Hover Effects */
-.back-to-topics-btn:hover {
+.btn-outline-primary:hover {
     transform: scale(1.1);
-    background: linear-gradient(45deg, #FFD93D, #FF6B6B);
-    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
-    text-shadow: 0 0 10px rgba(255, 105, 180, 0.8);
+    color: #6a1b9a;
 }
 
-/* Glowing effect on hover */
-.back-to-topics-btn:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
-    transform: rotate(45deg);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    opacity: 0;
-    pointer-events: none;
+/* Correct and Incorrect Options */
+.btn-success {
+    background-color: #28a745 !important;
 }
 
-.back-to-topics-btn:hover:before {
-    opacity: 1;
-    transform: rotate(45deg) scale(1.2);
-}
-
-/* Correct Answer Message Styling */
-.correct-answer-message {
-    font-size: 2em;
-    color: #28a745;  /* Green color for the correct answer message */
-    font-weight: bold;
-    margin-bottom: 20px;
-    display: none;  /* Hidden by default */
-}
-
-.correct-answer-message.show {
-    display: block; /* Show when correct answer is clicked */
-    animation: fadeInCorrect 0.5s ease forwards;
-}
-
-/* Fade In Animation for the Correct Answer Message */
-@keyframes fadeInCorrect {
-    0% { opacity: 0; transform: translateY(-10px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Celebration Modal */
-.celebration-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.celebration-content {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    color: #000;
-    font-size: 2em;
-    animation: popUp 1s ease forwards;
-    position: relative;
-}
-
-/* Sparkles for Celebration */
-.sparkle {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #FFD700;
-    border-radius: 50%;
-    animation: sparkleEffect 1s linear infinite;
-}
-
-@keyframes sparkleEffect {
-    0% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.5); }
-    100% { opacity: 0.5; transform: scale(1); }
-}
-
-/* Confetti */
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    animation: fall 2s linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh) rotate(360deg);
-    }
-}
-
-/* Fireworks burst */
-@keyframes fireworks {
-    0% { transform: scale(0); opacity: 1; }
-    100% { transform: scale(1); opacity: 0; }
-}
-
-.firework-burst {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 5px solid yellow;
-    animation: fireworks 2s ease-out;
+.btn-danger {
+    background-color: #dc3545 !important;
 }

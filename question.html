@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question</title>
+    <title>Answer the Question</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <h1 class="neon-text">Answer the Question</h1>
+<body class="bg-light text-dark">
+    <div class="container text-center my-5">
+        <h1 class="display-4 font-weight-bold">Answer the Question</h1>
 
-        <!-- Correct Answer Message -->
-        <div id="correct-answer-message" class="correct-answer-message hidden">
-            ✅ Correct Answer!
-        </div>
-
-        <div id="question-box" class="question-box hidden">
+        <div id="question-box" class="card bg-white text-dark mt-4 p-4 shadow-lg">
             <h2>Question:</h2>
-            <p id="question-text"></p>
-            <div id="options-container" class="options-container hidden"></div>
+            <p id="question-text" class="font-italic"></p>
+            <div id="options-container" class="options-container mt-3"></div>
         </div>
-        
-        <a id="back-to-topics-btn" href="index.html" class="hidden back-to-topics-btn">Back to Topics</a>
+
+        <a id="back-to-topics-btn" href="index.html" class="btn btn-outline-primary mt-4 d-none">Back to Topics</a>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
