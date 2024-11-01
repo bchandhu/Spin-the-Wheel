@@ -30,9 +30,12 @@ const questions = {
         // Add more questions here as needed
     ],
     coding: [
-        { question: "What does HTML stand for?", options: ["HyperText Machine Language", "HighText Markup Language", "HyperText Markup Language", "None"], correctOption: 2 },
-        { question: "What is a closure in JavaScript?", options: ["A function inside another function", "A function without parameters", "A function with global scope", "None of these"], correctOption: 0 },
-        { question: "What is a REST API?", options: ["Random Event Streaming", "Representational State Transfer", "Response Event State Transfer", "None of these"], correctOption: 1 },
+        { question: "What is a variable in programming?", options: ["A fixed number in a code.", "A container for storing data values.", "A function that changes code.", "A type of error in code."], correctOption: 1},
+        { question: "What is a loop in programming?", options: ["A code segment that executes only once.", "A function that changes code permanently.", "A process that repeats a block of code.", "A way to sort data in ascending order."], correctOption: 2},
+        { question: "Which of the following is a conditional statement?", options: ["while", "print", "if", "input"], correctOption: 2},
+        { question: "What is an array?", options: ["A way to write code for a specific platform.", "A list that can hold multiple values in a single variable.", "A function that deletes variables.", "A code that manages memory automatically."], correctOption: 1},
+        { question: "What is the purpose of a function in programming?", options: ["To take user input.", "To execute the entire program at once.", "To encapsulate a block of code for reuse.", "To convert data into binary."], correctOption: 2},
+        { question: "What is debugging?", options: ["Writing new code for an application.", "Creating bugs for testing code resilience.", "The process of finding and fixing errors in code.", "Running code without errors."], correctOption: 2}
         // Add more questions here as needed
     ],
     techTrends: [
