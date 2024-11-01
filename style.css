@@ -1,32 +1,32 @@
-/* Background and Font Styling */
+/* Common Background and Font Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+/* Low Poly or Gradient Backgrounds */
 body.bg-dark {
     background-image: url('https://path-to-your-low-poly-image.jpg'); /* Replace with your image URL */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
 }
-body.bg-dark {
+
+body.bg-gradient {
     background: linear-gradient(45deg, #f78ca0, #f9ad6a, #fad05f, #66a6ff, #5be7c4);
     background-size: 300% 300%;
     animation: gradientAnimation 15s ease infinite;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
+}
+
+body.bg-light {
+    background: linear-gradient(to right, #ffffff, #e3f2fd);
 }
 
 @keyframes gradientAnimation {
@@ -35,28 +35,24 @@ body.bg-dark {
     100% { background-position: 0% 50%; }
 }
 
-
-body.bg-light {
-    background: linear-gradient(to right, #ffffff, #e3f2fd);
-}
-
 /* Headings */
-.display-3{
-    color: #FFD700;
+.display-3 {
+    color: #531fe2;
     font-weight: bold;
 }
+
 .display-4 {
     color: #FFD700;
-    
 }
+
 .lead {
-    font-size: 2em; /* Increase font size */
+    font-size: 2em;
     font-weight: bold;
-    color: #FFB6C1; /* Light pink color for a soft look */
-    text-align: center;
+    color: #FFB6C1;
     margin-top: 10px;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 /* Category Block Styling */
@@ -86,39 +82,74 @@ body.bg-light {
 }
 
 /* Question Box */
-.card {
+#question-box {
     border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
 }
 
-/* Option Buttons */
+/* Question Text Styling */
+#question-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Option Buttons Styling */
 .option-btn {
     background-color: #5c6bc0;
     color: #fff;
     padding: 15px;
+    border: none;
     border-radius: 8px;
-    margin: 5px 0;
-    width: 100%;
-    text-transform: uppercase;
+    font-size: 1.2em;
     font-weight: bold;
+    width: 100%;
+    margin: 5px 0;
+    text-transform: uppercase;
     transition: all 0.3s ease;
 }
 
 .option-btn:hover {
     background-color: #3949ab;
+    transform: scale(1.05);
 }
 
-/* Back to Topics Button */
-.btn-outline-primary {
-    transition: transform 0.3s ease;
+/* Custom Back to Topics Button */
+#back-to-topics-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-outline-primary:hover {
+#back-to-topics-btn:hover {
     transform: scale(1.1);
-    color: #6a1b9a;
+    background: linear-gradient(135deg, #FFD93D, #FF6B6B);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
 }
 
-/* Correct and Incorrect Options */
+#back-to-topics-btn:active {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.4);
+}
+
+/* Correct and Incorrect Option Styling */
 .btn-success {
     background-color: #28a745 !important;
 }
@@ -126,16 +157,18 @@ body.bg-light {
 .btn-danger {
     background-color: #dc3545 !important;
 }
+
+/* Confetti Animation */
 .confetti {
     position: absolute;
     top: 0;
     width: 10px;
     height: 10px;
-    background-color: #FFD700; /* Default color */
+    background-color: #FFD700;
     border-radius: 50%;
     animation: fall 3s linear infinite;
     pointer-events: none;
-    z-index: 1000; /* Bring confetti to the front */
+    z-index: 1000;
 }
 
 @keyframes fall {
@@ -162,37 +195,4 @@ body.bg-light {
     transform-origin: center;
     pointer-events: none;
     z-index: 1000;
-}
-#question-text {
-    font-size: 2em; /* Increase font size */
-    font-weight: bold;
-    color: #333; /* Darker color for better readability */
-    text-align: center;
-    margin-bottom: 20px;
-}
-#back-to-topics-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #ffffff;
-    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-#back-to-topics-btn:hover {
-    transform: scale(1.1);
-    background: linear-gradient(135deg, #FFD93D, #FF6B6B);
-    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
-}
-
-#back-to-topics-btn:active {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
-    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.4);
 }
