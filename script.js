@@ -39,9 +39,12 @@ const questions = {
         // Add more questions here as needed
     ],
     techTrends: [
-        { question: "What is blockchain technology?", options: ["A decentralized ledger", "Data structure", "Programming language", "None"], correctOption: 0 },
-        { question: "What is the Internet of Things (IoT)?", options: ["Connected devices", "Network protocol", "Data management", "None"], correctOption: 0 },
-        { question: "What is quantum computing?", options: ["Computing using quantum states", "Cloud computing", "Parallel processing", "None"], correctOption: 0 },
+        { question: "What is the primary purpose of AI in modern applications?", options: ["To improve graphics quality.", "To enable machines to perform tasks that require human intelligence.", "To provide high-speed internet access.", "To enhance physical security."], correctOption: 1},
+        { question: "Which technology allows for storing and managing data across multiple connected devices?", options: ["Cloud computing", "Augmented reality", "Internet of Things (IoT)", "Blockchain"], correctOption: 0},
+        { question: "What is blockchain primarily used for?", options: ["Hosting large media files.", "Managing smart home devices.", "Creating a secure, distributed ledger.", "Enhancing game graphics."], correctOption: 2},
+        { question: "Which field is using machine learning to analyze large sets of medical data to improve diagnosis?", options: ["Agriculture", "Finance", "Healthcare", "Retail"], correctOption: 2},
+        { question: "What does the term 'edge computing' refer to?", options: ["Performing data processing at or near the source of data.", "Storing all data on a centralized server.", "Enhancing the speed of Wi-Fi connections.", "Improving user experience with virtual reality."], correctOption: 0},
+        { question: "What is the primary benefit of 5G technology?", options: ["Faster data transfer speeds and lower latency.", "Increased power for mobile devices.", "Enhanced gaming graphics.", "Improved email functionality."], correctOption: 0}
         // Add more questions here as needed
     ],
     ai: [
