@@ -11,28 +11,72 @@ body {
     color: #ffffff;
 }
 
-/* Low Poly or Gradient Backgrounds */
-body.bg-dark {
-    background-image: url('https://path-to-your-low-poly-image.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-body.bg-gradient {
-    background: linear-gradient(45deg, #f78ca0, #f9ad6a, #fad05f, #66a6ff, #5be7c4);
-    background-size: 300% 300%;
-    animation: gradientAnimation 15s ease infinite;
-}
-
+/* Neon Blue Glow and Radial Centered Effect for question.html */
 body.bg-light {
-    background: linear-gradient(to right, #ffffff, #e3f2fd);
+    background: radial-gradient(circle at center, #e0f7fa, #89CFF0, #4b8dbe, #1f1f1f); /* Adjusted gradient to cooler tones */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Neon Glow Overlay */
+body.bg-light::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(0, 204, 255, 0.5), transparent); /* Cyan glow */
+    filter: blur(100px);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Accent Shapes for Extra Flair */
+body.bg-light .shape1,
+body.bg-light .shape2,
+body.bg-light .shape3 {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: blur(80px);
+}
+
+/* Top Right Accent */
+body.bg-light .shape1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 191, 255, 0.3); /* Neon Blue */
+    top: 10%;
+    right: 10%;
+}
+
+/* Bottom Left Accent */
+body.bg-light .shape2 {
+    width: 250px;
+    height: 250px;
+    background: rgba(0, 255, 204, 0.3); /* Light Cyan */
+    bottom: 15%;
+    left: 15%;
+}
+
+/* Center Accent */
+body.bg-light .shape3 {
+    width: 400px;
+    height: 400px;
+    background: rgba(135, 206, 250, 0.3); /* Sky Blue */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
 }
 
 /* Headings */
@@ -81,14 +125,14 @@ body.bg-light {
     transform: scale(1);
 }
 
-/* Question Box */
+/* Question Box Styling */
 #question-box {
     border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     max-width: 600px;
     margin: auto;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent background */
+    color: #FFFFFF;
     padding: 20px;
 }
 
@@ -96,15 +140,16 @@ body.bg-light {
 #question-text {
     font-size: 2em;
     font-weight: bold;
-    color: #333;
+    color: #00FFFF; /* Bright cyan for neon effect */
     text-align: center;
     margin-bottom: 20px;
+    text-shadow: 0px 0px 8px rgba(0, 204, 255, 0.8); /* Glow effect for text */
 }
 
 /* Option Buttons Styling */
 .option-btn {
-    background-color: #5c6bc0;
-    color: #fff;
+    background-color: #003366; /* Dark blue background */
+    color: #00FFFF; /* Neon cyan text color */
     padding: 15px;
     border: none;
     border-radius: 8px;
@@ -114,11 +159,13 @@ body.bg-light {
     margin: 5px 0;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 204, 255, 0.5); /* Subtle glow for buttons */
 }
 
 .option-btn:hover {
-    background-color: #3949ab;
+    background-color: #004080; /* Slightly brighter blue on hover */
     transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 204, 255, 0.7); /* Enhanced glow on hover */
 }
 
 /* Custom Back to Topics Button */
@@ -127,26 +174,26 @@ body.bg-light {
     padding: 15px 30px;
     font-size: 1.2em;
     font-weight: bold;
-    color: #ffffff;
-    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+    color: #00FFFF; /* Neon cyan text */
+    background: linear-gradient(135deg, #004080, #003366); /* Dark blue gradient */
     border: none;
     border-radius: 8px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 204, 255, 0.7); /* Neon glow */
 }
 
 #back-to-topics-btn:hover {
     transform: scale(1.1);
-    background: linear-gradient(135deg, #FFD93D, #FF6B6B);
-    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
+    background: linear-gradient(135deg, #003366, #002244); /* Darker gradient on hover */
+    box-shadow: 0 10px 25px rgba(0, 204, 255, 0.6);
 }
 
 #back-to-topics-btn:active {
     transform: scale(1.05);
-    background: linear-gradient(135deg, #FF6B6B, #FFD93D);
-    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.4);
+    background: linear-gradient(135deg, #002244, #001122);
+    box-shadow: 0 3px 10px rgba(0, 204, 255, 0.4);
 }
 
 /* Correct and Incorrect Option Styling */

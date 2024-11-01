@@ -9,18 +9,26 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body class="bg-light text-dark">
-    <div class="container text-center my-5">
-        <h1 class="display-4 font-weight-bold">Answer the Question</h1>
+    <!-- Neon Accent Shapes -->
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+    <div class="shape3"></div>
 
-        <div id="question-box" class="card bg-white text-dark mt-4 p-4 shadow-lg">
+    <div class="container text-center my-5">
+        <h1 class="display-4 font-weight-bold text-white">Answer the Question</h1>
+
+        <!-- Question box where the question and options will be displayed -->
+        <div id="question-box" class="card bg-dark text-white mt-4 p-4 shadow-lg">
             <h2 class="text-muted">Question:</h2>
             <p id="question-text" class="font-italic"></p>
             <div id="options-container" class="options-container mt-3"></div>
         </div>
 
-        <a id="back-to-topics-btn" href="index.html" class="mt-4 d-none">Back to Topics</a>
-
+        <!-- Back to Topics button -->
+        <a id="back-to-topics-btn" href="index.html" class="btn btn-light mt-4 d-none">Back to Topics</a>
     </div>
+
+    <!-- JavaScript to handle question logic and celebration effects -->
     <script src="script.js"></script>
 </body>
 </html>
