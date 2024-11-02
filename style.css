@@ -243,3 +243,33 @@ body.bg-light .shape3 {
     pointer-events: none;
     z-index: 1000;
 }
+.answer-btn {
+    background-color: #0066cc; /* Bright blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.answer-btn:hover {
+    background-color: #005bb5; /* Darker blue */
+    transform: scale(1.05);
+}
+
+/* Answer Text Styling */
+.answer-text {
+    color: #FFD700; /* Gold color */
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

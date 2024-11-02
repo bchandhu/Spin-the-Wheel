@@ -1,15 +1,16 @@
 // Define the questions for each category
 const questions = {
-    randomFun: [
-        { question: "What's your favorite superhero?", options: ["Superman", "Batman", "Wonder Woman", "Spider-Man"], correctOption: 1 },
-        { question: "What's the weirdest food you've ever eaten?", options: ["Frog legs", "Durian", "Escargot", "None of these"], correctOption: 3 },
-        { question: "If you could travel anywhere, where would you go?", options: ["Paris", "Tokyo", "New York", "None of these"], correctOption: 1 },
-        // Add more questions here as needed
-    ],
-    math: [
-        { question: "What is 8 x 9?", options: ["63", "72", "81", "64"], correctOption: 1 },
-        { question: "What is the square root of 144?", options: ["10", "12", "14", "16"], correctOption: 1 },
-        { question: "Solve for x: 2x + 3 = 11", options: ["4", "5", "6", "7"], correctOption: 0 },
+    techTrends: [
+        { question: "What is blockchain technology?", options: ["A decentralized ledger", "Data structure", "Programming language", "None"], correctOption: 0 },
+        { question: "What is the Internet of Things (IoT)?", options: ["Connected devices", "Network protocol", "Data management", "None"], correctOption: 0 },
+        { question: "What is quantum computing?", options: ["Computing using quantum states", "Cloud computing", "Parallel processing", "None"], correctOption: 0 },
+        { question: "Which company developed the first successful personal computer?", options: ["Apple Inc.", "IBM", "Microsoft", "Commodore"], correctOption: 0 },
+        { question: " What is the name of the virtual assistant created by Amazon?", options: ["Siri", "Google Assistant", "Alexa", "Cortana"], correctOption: 2 },
+        { question: "What popular mobile operating system is developed by Google?", options: ["iOS", "BlackBerry OS", "Windows Mobile", "Android"], correctOption: 3 },
+        { question: "What technology allows for wireless communication over short distances, typically used in devices like smartphones and smartwatches?", options: ["Wi-Fi", "Bluetooth", "NFC", "Zigbee"], correctOption: 1 },
+        { question: "In what year was the first iPhone released?", options: ["2005", "2007", "2008", "2006"], correctOption: 1 },
+        { question: "Which social media platform is known for its character limit of 280 characters per post?", options: ["Instagram", "LinkedIn", "Facebook", "Twitter"], correctOption: 3 },
+        { question: "What is the name of the cloud storage service developed by Microsoft?", options: ["OneDrive", "Google Drive", "Dropbox", "iCloud"], correctOption: 0 },
         // Add more questions here as needed
     ],
     coding: [
@@ -25,30 +26,28 @@ const questions = {
         { question: "In HTML, what is the purpose of the <div> tag?", options: ["To define a heading", "To define a paragraph", "To define a hyperlink.", "To define a generic container for other elements"], correctOption: 3 },
         // Add more questions here as needed
     ],
-    techTrends: [
-        { question: "What is blockchain technology?", options: ["A decentralized ledger", "Data structure", "Programming language", "None"], correctOption: 0 },
-        { question: "What is the Internet of Things (IoT)?", options: ["Connected devices", "Network protocol", "Data management", "None"], correctOption: 0 },
-        { question: "What is quantum computing?", options: ["Computing using quantum states", "Cloud computing", "Parallel processing", "None"], correctOption: 0 },
-        { question: "Which company developed the first successful personal computer?", options: ["Apple Inc.", "IBM", "Microsoft", "Commodore"], correctOption: 0 },
-        { question: " What is the name of the virtual assistant created by Amazon?", options: ["Siri", "Google Assistant", "Alexa", "Cortana"], correctOption: 2 },
-        { question: "What popular mobile operating system is developed by Google?", options: ["iOS", "BlackBerry OS", "Windows Mobile", "Android"], correctOption: 3 },
-        { question: "What technology allows for wireless communication over short distances, typically used in devices like smartphones and smartwatches?", options: ["Wi-Fi", "Bluetooth", "NFC", "Zigbee"], correctOption: 1 },
-        { question: "In what year was the first iPhone released?", options: ["2005", "2007", "2008", "2006"], correctOption: 1 },
-        { question: "Which social media platform is known for its character limit of 280 characters per post?", options: ["Instagram", "LinkedIn", "Facebook", "Twitter"], correctOption: 3 },
-        { question: "What is the name of the cloud storage service developed by Microsoft?", options: ["OneDrive", "Google Drive", "Dropbox", "iCloud"], correctOption: 0 },
-        // Add more questions here as needed
-    ],
-    ai: [
-        { question: "What is machine learning?", options: ["Algorithms learning from data", "A type of database", "Computer networking", "None"], correctOption: 0 },
-        { question: "What is deep learning?", options: ["Neural networks with many layers", "Surface-level learning", "Simple algorithms", "None"], correctOption: 0 },
-        { question: "What is natural language processing?", options: ["AI understanding human language", "Programming language", "Cloud storage", "None"], correctOption: 0 },
-        // Add more questions here as needed
-    ],
-    pizzas: [
-        { question: "What is your favorite pizza topping?", options: ["Pepperoni", "Mushrooms", "Onions", "Pineapple"], correctOption: 0 },
-        { question: "Which city has the best pizza: New York or Chicago?", options: ["New York", "Chicago", "San Francisco", "None"], correctOption: 1 },
-        { question: "What is the best crust type: thin, thick, or stuffed?", options: ["Thin", "Thick", "Stuffed", "None"], correctOption: 2 },
-        // Add more questions here as needed
+    techjokes: [
+        { question: "Why do programmers prefer dark mode?", answer: "Because light attracts bugs." },
+        { question: "Why did the computer break up with the internet?", answer: "It found someone with better connections." },
+        { question: "Why do Java developers wear glasses?", answer: "Because they don't C#." },
+        { question: "Why was the computer cold?", answer: "It left its Windows open." },
+        { question: "How does a computer get drunk?", answer: "It takes screenshots." },
+        { question: "Why was the smartphone so successful?", answer: "It had a lot of connections." },
+        { question: "Why did the computer go to therapy?", answer: "It had too many bytes." },
+        { question: "Why was the computer tired after a long day?", answer: "It had a hard drive." },
+        { question: "What’s a computer’s favorite snack?", answer: "Microchips." },
+        { question: "How do robots pay for things?", answer: "With cache." },
+        { question: "Why was the cell phone wearing glasses?", answer: "It lost its contacts." },
+        { question: "Why are computer screens so bad at relationships?", answer: "They keep refreshing their ex." },
+        { question: "What’s a programmer’s favorite place to hang out?", answer: "The Loop." },
+        { question: "Why did the computer cross the road?", answer: "To get to the other site." },
+        { question: "What’s a coder’s favorite kind of music?", answer: "Algo-rhythm!" },
+        { question: "Why don’t robots have brothers?", answer: "Because they only have trans-sisters!" },
+        { question: "Why are keyboards always sleepy?", answer: "Because they have two shifts!" },
+        { question: "How do cloud engineers stay so happy?", answer: "They’re always on cloud nine." },
+        { question: "Why was the smartphone feeling so insecure?", answer: "It kept comparing itself to other models." },
+        { question: "Why did the database administrator leave her partner?", answer: "Because he had one-to-many relationships." },
+        { question: "Why did the password break up with the login?", answer: "It felt used." }
     ],
     chicagoTrivia: [
         { question: "What is the name of the famous skyscraper in Chicago that was the tallest building in the world when it was completed in 1973?", options: ["Tribune Tower", "Aon Center", "Willis Tower (formerly Sears Tower).", "John Hancock Center"], correctOption: 2 },
@@ -77,11 +76,24 @@ const questions = {
         { question: "Which Chicago building is the tallest in the city as of 2023?", options: ["Trump International Hotel and Tower", "John Hancock Center", "Aon Center", "Willis Tower"], correctOption: 3 },
         { question: "What famous Chicago-style sandwich is made with layers of Italian beef and giardiniera?", options: ["Italian beef sandwich", "Chicago-style hot dog", "Portillo's beef sandwich", "Italian sausage sandwich"], correctOption: 0 }
         // Add more questions here as needed
-    ]
+    ],
+   
+    funnyrandom: [
+        { question: "What is machine learning?", options: ["Algorithms learning from data", "A type of database", "Computer networking", "None"], correctOption: 0 },
+        { question: "What is deep learning?", options: ["Neural networks with many layers", "Surface-level learning", "Simple algorithms", "None"], correctOption: 0 },
+        { question: "What is natural language processing?", options: ["AI understanding human language", "Programming language", "Cloud storage", "None"], correctOption: 0 },
+        // Add more questions here as needed
+    ],
+    math: [
+        { question: "What is 8 x 9?", options: ["63", "72", "81", "64"], correctOption: 1 },
+        { question: "What is the square root of 144?", options: ["10", "12", "14", "16"], correctOption: 1 },
+        { question: "Solve for x: 2x + 3 = 11", options: ["4", "5", "6", "7"], correctOption: 0 },
+        // Add more questions here as needed
+    ],
 };
 
 function playCelebrationSound() {
-    const audio = new Audio('https://www.fesliyanstudios.com/play-mp3/387'); // Example sound URL
+    const audio = new Audio('https://www.fesliyanstudios.com/play-mp3/387');
     audio.play();
 }
 
@@ -110,21 +122,40 @@ function getCategoryFromURL() {
 function showQuestion(category) {
     const randomIndex = Math.floor(Math.random() * questions[category].length);
     const selectedQuestion = questions[category][randomIndex];
-
-    document.getElementById("question-text").innerText = selectedQuestion.question;
+    const questionText = document.getElementById("question-text");
     const optionsContainer = document.getElementById("options-container");
-    optionsContainer.innerHTML = ""; // Clear previous options
-    optionsContainer.classList.remove("hidden");
 
-    selectedQuestion.options.forEach((option, index) => {
-        const optionBtn = document.createElement("button");
-        optionBtn.className = "option-btn btn btn-lg btn-block";
-        optionBtn.innerText = option;
-        optionBtn.onclick = function () {
-            handleAnswer(optionBtn, index, selectedQuestion.correctOption);
+    questionText.innerText = selectedQuestion.question;
+    optionsContainer.innerHTML = ""; // Clear previous options
+
+    if (category === 'techjokes') {
+        // Create "Answer" button for tech jokes
+        const answerButton = document.createElement("button");
+        answerButton.className = "answer-btn btn btn-lg";
+        answerButton.innerText = "Show Answer";
+        
+        // Create the answer text, initially hidden
+        const answerText = document.createElement("p");
+        answerText.className = "answer-text hidden"; // Hidden by default
+        answerText.innerText = selectedQuestion.answer;
+        
+        answerButton.onclick = function () {
+            answerText.classList.toggle("hidden"); // Toggle answer visibility on click
         };
-        optionsContainer.appendChild(optionBtn);
-    });
+
+        optionsContainer.appendChild(answerButton);
+        optionsContainer.appendChild(answerText);
+    } else {
+        selectedQuestion.options.forEach((option, index) => {
+            const optionBtn = document.createElement("button");
+            optionBtn.className = "option-btn btn btn-lg btn-block";
+            optionBtn.innerText = option;
+            optionBtn.onclick = function () {
+                handleAnswer(optionBtn, index, selectedQuestion.correctOption);
+            };
+            optionsContainer.appendChild(optionBtn);
+        });
+    }
 
     const questionBox = document.getElementById("question-box");
     questionBox.classList.remove("hidden");
@@ -140,7 +171,6 @@ function handleAnswer(button, selectedIndex, correctIndex) {
                 option.classList.add("btn-secondary");
             }
         });
-        // Trigger grand celebration (confetti, fireworks, and sound)
         launchConfetti();
         showFireworks();
         playCelebrationSound();
