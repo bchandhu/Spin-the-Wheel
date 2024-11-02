@@ -17,6 +17,11 @@ const questions = {
         { question: "Which field is using machine learning to analyze large sets of medical data to improve diagnosis?", options: ["Agriculture", "Finance", "Healthcare", "Retail"], correctOption: 2 },
         { question: "What does the term 'edge computing' refer to?", options: ["Performing data processing at or near the source of data.", "Storing all data on a centralized server.", "Enhancing the speed of Wi-Fi connections.", "Improving user experience with virtual reality."], correctOption: 0 },
         { question: "What is the primary benefit of 5G technology?", options: ["Faster data transfer speeds and lower latency.", "Increased power for mobile devices.", "Enhanced gaming graphics.", "Improved email functionality."], correctOption: 0 },
+        { question: "Which company is known for creating the first smartphone?", options: ["Apple", "IBM", "Nokia", "Motorola"], correctOption: 1 }, 
+        { question: "What does the acronym "AI" stand for in technology?", options: ["Automated Information ", "Advanced Intelligence", "Artificial Intelligence", "Applied Innovation"], correctOption: 2 }, 
+        { question: "Which programming language is primarily used for developing iOS apps?", options: ["Java", "Swift", "Python", "C++"], correctOption: 1 }, 
+        { question: "Which of the following is a cloud computing service model?", options: ["PaaS", "CAD", "IoT", "BIOS"], correctOption: 0 }, 
+        { question: "What does the term "big data" refer to?", options: ["Small databases", "Large volumes of data", "Virtual reality simulations", "Low-cost storage solutions"], correctOption: 1 } , { question: "Which social media platform was founded first?", options: ["Facebook", "Twitter", "LinkedIn", "Instagram"], correctOption: 2 }
         // Add more questions here as needed
     ],
     coding: [
@@ -36,6 +41,66 @@ const questions = {
         { question: "What is an array?", options: ["A way to write code for a specific platform.", "A list that can hold multiple values in a single variable.", "A function that deletes variables.", "A code that manages memory automatically."], correctOption: 1 },
         { question: "What is the purpose of a function in programming?", options: ["To take user input.", "To execute the entire program at once.", "To encapsulate a block of code for reuse.", "To convert data into binary."], correctOption: 2 },
         { question: "What is debugging?", options: ["Writing new code for an application.", "Creating bugs for testing code resilience.", "The process of finding and fixing errors in code.", "Running code without errors."], correctOption: 2 },
+        {
+        question: "What is an object in object-oriented programming?",
+        options: [
+            "A variable with a single value.",
+            "A function that performs calculations.",
+            "An instance of a class containing data and methods.",
+            "A type of loop for repeating code."
+        ],
+        correctOption: 2
+    },
+    {
+        question: "What is inheritance in object-oriented programming?",
+        options: [
+            "The ability to create a new class from an existing class.",
+            "A function that stores data.",
+            "A type of error that occurs at runtime.",
+            "A feature that handles memory automatically."
+        ],
+        correctOption: 0
+    },
+    {
+        question: "What is encapsulation in programming?",
+        options: [
+            "A way to hide data and methods within a class.",
+            "A method for storing arrays in memory.",
+            "A type of error in compiling code.",
+            "A way to print values to the console."
+        ],
+        correctOption: 0
+    },
+        {
+        question: "What does 'DRY' stand for in programming principles?",
+        options: [
+            "Do Run Your code",
+            "Don't Repeat Yourself",
+            "Dynamic Runtime Yield",
+            "Direct Resource Yield"
+        ],
+        correctOption: 1
+    },
+    {
+        question: "What is a recursive function?",
+        options: [
+            "A function that runs only once.",
+            "A function that calls itself in its definition.",
+            "A function that handles errors in code.",
+            "A function that returns multiple values."
+        ],
+        correctOption: 1
+    },
+    {
+        question: "What is the purpose of the 'return' statement in a function?",
+        options: [
+            "To stop the program from running.",
+            "To execute a function repeatedly.",
+            "To exit a function and send a value back to the caller.",
+            "To change the type of a variable."
+        ],
+        correctOption: 2
+    }
         // Add more questions here as needed
     ],
     techjokes: [
