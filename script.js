@@ -11,6 +11,12 @@ const questions = {
         { question: "In what year was the first iPhone released?", options: ["2005", "2007", "2008", "2006"], correctOption: 1 },
         { question: "Which social media platform is known for its character limit of 280 characters per post?", options: ["Instagram", "LinkedIn", "Facebook", "Twitter"], correctOption: 3 },
         { question: "What is the name of the cloud storage service developed by Microsoft?", options: ["OneDrive", "Google Drive", "Dropbox", "iCloud"], correctOption: 0 },
+        { question: "What is the primary purpose of AI in modern applications?", options: ["To improve graphics quality.", "To enable machines to perform tasks that require human intelligence.", "To provide high-speed internet access.", "To enhance physical security."], correctOption: 1},
+        { question: "Which technology allows for storing and managing data across multiple connected devices?", options: ["Cloud computing", "Augmented reality", "Internet of Things (IoT)", "Blockchain"], correctOption: 0},
+        { question: "What is blockchain primarily used for?", options: ["Hosting large media files.", "Managing smart home devices.", "Creating a secure, distributed ledger.", "Enhancing game graphics."], correctOption: 2},
+        { question: "Which field is using machine learning to analyze large sets of medical data to improve diagnosis?", options: ["Agriculture", "Finance", "Healthcare", "Retail"], correctOption: 2},
+        { question: "What does the term 'edge computing' refer to?", options: ["Performing data processing at or near the source of data.", "Storing all data on a centralized server.", "Enhancing the speed of Wi-Fi connections.", "Improving user experience with virtual reality."], correctOption: 0},
+        { question: "What is the primary benefit of 5G technology?", options: ["Faster data transfer speeds and lower latency.", "Increased power for mobile devices.", "Enhanced gaming graphics.", "Improved email functionality."], correctOption: 0},
         // Add more questions here as needed
     ],
     coding: [
@@ -24,6 +30,12 @@ const questions = {
         { question: "In which programming language was the original 'Hello, World!' program famously written?", options: ["C++", "C", "Python", "Java"], correctOption: 1 },
         { question: "In SQL, what is the keyword used to sort the result set of a query??", options: ["SORT", "ORDER", "RANK", "CLASSIFY"], correctOption: 1 },
         { question: "In HTML, what is the purpose of the <div> tag?", options: ["To define a heading", "To define a paragraph", "To define a hyperlink.", "To define a generic container for other elements"], correctOption: 3 },
+        { question: "What is a variable in programming?", options: ["A fixed number in a code.", "A container for storing data values.", "A function that changes code.", "A type of error in code."], correctOption: 1},
+        { question: "What is a loop in programming?", options: ["A code segment that executes only once.", "A function that changes code permanently.", "A process that repeats a block of code.", "A way to sort data in ascending order."], correctOption: 2},
+        { question: "Which of the following is a conditional statement?", options: ["while", "print", "if", "input"], correctOption: 2},
+        { question: "What is an array?", options: ["A way to write code for a specific platform.", "A list that can hold multiple values in a single variable.", "A function that deletes variables.", "A code that manages memory automatically."], correctOption: 1},
+        { question: "What is the purpose of a function in programming?", options: ["To take user input.", "To execute the entire program at once.", "To encapsulate a block of code for reuse.", "To convert data into binary."], correctOption: 2},
+        { question: "What is debugging?", options: ["Writing new code for an application.", "Creating bugs for testing code resilience.", "The process of finding and fixing errors in code.", "Running code without errors."], correctOption: 2},
         // Add more questions here as needed
     ],
     techjokes: [
@@ -85,10 +97,26 @@ const questions = {
         // Add more questions here as needed
     ],
     math: [
-        { question: "What is 8 x 9?", options: ["63", "72", "81", "64"], correctOption: 1 },
-        { question: "What is the square root of 144?", options: ["10", "12", "14", "16"], correctOption: 1 },
-        { question: "Solve for x: 2x + 3 = 11", options: ["4", "5", "6", "7"], correctOption: 0 },
-        // Add more questions here as needed
+        { question: "The Magic Circle: Ten numbers form a circle. Each number equals the sum of its two neighbors. The total sum is 300. What is each number?", options: ["15", "30", "45", "60"], correctOption: 1},
+        { question: "Pirates and Gold: Five pirates must split 100 coins. The most senior pirate makes the proposal, and a rejected proposal results in them being thrown overboard. What’s the safest proposal for the senior pirate?", options: ["Keep 99 coins", "Keep 98 coins and give 1 to two others", "Keep 50 coins", "Share equally"], correctOption: 1},
+        { question: "Light Switch Problem: A row of 100 light switches is initially off. 100 people toggle switches, following a certain pattern. Which switches remain on?", options: ["All switches", "Only switches 1, 2, and 3", "Switches 1, 4, 9, 16, 25... up to 100", "Every other switch"], correctOption: 2},
+        { question: "Three People, One Hat: Three people each wear a hat, either red or blue. They can see others’ hats but not their own and must guess their hat color. What’s the best strategy?", options: ["Guess randomly", "Assume an even number of hats are the same color", "Pass the turn", "Guess opposite of what they see"], correctOption: 1},
+        { question: "Infinity Pool: Water is pumped into an infinite pool at a rate of 2 gallons per minute. A finite portion of the pool grows logarithmically. How much water fills it in 10 minutes?", options: ["5 gallons", "4.78 gallons", "20 gallons", "10 gallons"], correctOption: 1},
+        { question: "Meeting Friends: Two friends randomly arrive at a coffee shop between 2 and 3 p.m., waiting up to 15 minutes for each other. What’s the probability they meet?", options: ["25%", "43.75%", "50%", "75%"], correctOption: 1},
+        { question: "Fibonacci Fun: What is the sum of the first 100 Fibonacci numbers?", options: ["573147844013817084100", "573147844013817084101", "1000000000000000000000", "12345678901234567890"], correctOption: 0},
+        { question: "Paradox of the Trains: Two trains 60 miles apart move toward each other, one at 30 mph and the other at 20 mph. A bird flies back and forth at 50 mph. How far does the bird travel?", options: ["30 miles", "60 miles", "90 miles", "120 miles"], correctOption: 1},
+        { question: "Monty Hall Problem: You choose one of three doors. After revealing a goat behind another door, the host lets you switch. Should you switch?", options: ["Yes, because it improves your chance", "No, the odds stay the same", "Yes, but only if the host smiles", "It doesn’t matter"], correctOption: 0},
+        { question: "Tiling Puzzle: How many ways can you tile a 10x10 grid using 1x2 dominoes?", options: ["1024", "2048", "51205", "100000"], correctOption: 2},
+        { question: "Magic Square Mystery: In a 3x3 magic square with numbers 1 through 9, what is the magic sum of each row, column, and diagonal?", options: ["9", "12", "15", "18"], correctOption: 2},
+        { question: "Elevator Paradox: Why are you more likely to wait for an elevator above you in a 10-story building?", options: ["Random chance", "More floors above than below", "Elevators are faster when going up", "Elevators are always above ground floor"], correctOption: 1},
+        { question: "Area of the Weird Shape: What is the area of overlap of four quarter circles in a square?", options: ["π - 2", "π", "2π", "π + 2"], correctOption: 0},
+        { question: "The Number Challenge: What is the smallest positive integer divisible by each number from 1 to 10?", options: ["240", "360", "420", "2520"], correctOption: 3},
+        { question: "Dice Rolls: What’s the probability that the sum of two dice rolls is prime?", options: ["1/2", "5/12", "1/3", "1/4"], correctOption: 1},
+        { question: "A Coin Flip Game: Two players flip a coin, taking turns. The first heads wins. What’s the probability the first player wins?", options: ["1/2", "2/3", "3/4", "1/4"], correctOption: 1},
+        { question: "Twin Prime Problem: What is the largest known pair of twin primes?", options: ["(3, 5)", "(11, 13)", "2996863034895 × 2^1290000 ± 1", "(41, 43)"], correctOption: 2},
+        { question: "Zeno’s Paradox Revisited: Achilles runs 10 times faster than a tortoise, who has a 10-meter head start. How long does it take him to catch up?", options: ["1 second", "9 seconds", "10 seconds", "10/9 seconds"], correctOption: 3},
+        { question: "Geometry in Motion: If a bicycle wheel has a 0.5-meter radius, how far does it travel in one complete rotation?", options: ["π meters", "2π meters", "0.5π meters", "4π meters"], correctOption: 1},
+        { question: "Magic Number Triangle: Arrange the numbers 1 through 9 in a triangle so each side has the same sum. What is the sum?", options: ["15", "17", "20", "25"], correctOption: 1}
     ],
 };
 
