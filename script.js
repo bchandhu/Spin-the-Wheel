@@ -21,7 +21,32 @@ const questions = {
         { question: "What does the acronym "AI" stand for in technology?", options: ["Automated Information ", "Advanced Intelligence", "Artificial Intelligence", "Applied Innovation"], correctOption: 2 }, 
         { question: "Which programming language is primarily used for developing iOS apps?", options: ["Java", "Swift", "Python", "C++"], correctOption: 1 }, 
         { question: "Which of the following is a cloud computing service model?", options: ["PaaS", "CAD", "IoT", "BIOS"], correctOption: 0 }, 
-        { question: "What does the term "big data" refer to?", options: ["Small databases", "Large volumes of data", "Virtual reality simulations", "Low-cost storage solutions"], correctOption: 1 } , { question: "Which social media platform was founded first?", options: ["Facebook", "Twitter", "LinkedIn", "Instagram"], correctOption: 2 }
+        { question: "What does the term "big data" refer to?", options: ["Small databases", "Large volumes of data", "Virtual reality simulations", "Low-cost storage solutions"], correctOption: 1 } , { question: "Which social media platform was founded first?", options: ["Facebook", "Twitter", "LinkedIn", "Instagram"], correctOption: 2 },
+        { 
+            question: "What does a VPN primarily do?", 
+            options: ["Improves device performance", "Secures internet connection", "Increases internet speed", "Tracks online activity"], 
+            correctOption: 1 
+        },
+        { 
+            question: "What is 'machine learning'?", 
+            options: ["A machine maintenance technique", "A type of network protocol", "A method for allowing computers to learn from data", "A physical computing device"], 
+            correctOption: 2 
+        },
+        { 
+            question: "What is the purpose of a firewall in cybersecurity?", 
+            options: ["Enhancing user interface", "Blocking unauthorized access", "Boosting internet speed", "Providing cloud storage"], 
+            correctOption: 1 
+        },
+        { 
+            question: "Which programming language is commonly used for data analysis?", 
+            options: ["JavaScript", "Python", "HTML", "PHP"], 
+            correctOption: 1 
+        },
+        { 
+            question: "What is the main use of cloud storage?", 
+            options: ["Storing files remotely", "Enhancing graphics", "Increasing network security", "Running offline applications"], 
+            correctOption: 0 
+        }
         // Add more questions here as needed
     ],
     coding: [
