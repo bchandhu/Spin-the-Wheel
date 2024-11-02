@@ -18,10 +18,7 @@ const questions = {
         { question: "What does the term 'edge computing' refer to?", options: ["Performing data processing at or near the source of data.", "Storing all data on a centralized server.", "Enhancing the speed of Wi-Fi connections.", "Improving user experience with virtual reality."], correctOption: 0 },
         { question: "What is the primary benefit of 5G technology?", options: ["Faster data transfer speeds and lower latency.", "Increased power for mobile devices.", "Enhanced gaming graphics.", "Improved email functionality."], correctOption: 0 },
         { question: "Which company is known for creating the first smartphone?", options: ["Apple", "IBM", "Nokia", "Motorola"], correctOption: 1 }, 
-        { question: "What does the acronym "AI" stand for in technology?", options: ["Automated Information ", "Advanced Intelligence", "Artificial Intelligence", "Applied Innovation"], correctOption: 2 }, 
-        { question: "Which programming language is primarily used for developing iOS apps?", options: ["Java", "Swift", "Python", "C++"], correctOption: 1 }, 
-        { question: "Which of the following is a cloud computing service model?", options: ["PaaS", "CAD", "IoT", "BIOS"], correctOption: 0 }, 
-        { question: "What does the term "big data" refer to?", options: ["Small databases", "Large volumes of data", "Virtual reality simulations", "Low-cost storage solutions"], correctOption: 1 } , { question: "Which social media platform was founded first?", options: ["Facebook", "Twitter", "LinkedIn", "Instagram"], correctOption: 2 },
+        
         { 
             question: "What does a VPN primarily do?", 
             options: ["Improves device performance", "Secures internet connection", "Increases internet speed", "Tracks online activity"], 
