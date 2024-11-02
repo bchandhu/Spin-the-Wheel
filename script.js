@@ -100,6 +100,36 @@ const questions = {
             "To change the type of a variable."
         ],
         correctOption: 2
+    },
+        { 
+        question: "What does 'Hello, World!' mean in programming?", 
+        options: ["A program that connects online", "A security system test", "Signals a program is finished", "A basic code example"], 
+        correctOption: 3 
+    },
+    { 
+        question: "What language was used to create the World Wide Web?", 
+        options: ["Python", "HTML", "Java", "C++"], 
+        correctOption: 1 
+    },
+    { 
+        question: "What is the most popular language for web development?", 
+        options: ["Swift", "C#", "JavaScript", "Ruby"], 
+        correctOption: 2 
+    },
+    { 
+        question: "How does a 'for loop' work?", 
+        options: ["Repeats code", "Runs only if true", "Stops all code", "Runs randomly"], 
+        correctOption: 0 
+    },
+    { 
+        question: "What does 'OOP' stand for in programming?", 
+        options: ["Open Online Platform", "Official Operations Protocol", "Optimized Output Process", "Object-Oriented Programming"], 
+        correctOption: 3 
+    },
+    { 
+        question: "What’s a 'bug' in programming?", 
+        options: ["A code improvement feature", "A security tool for programs", "An error in the code", "A type of software update"], 
+        correctOption: 2 
     }
         // Add more questions here as needed
     ],
